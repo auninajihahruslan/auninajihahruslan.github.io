@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>An Ordinary Hooman</title>
+
+<style type="text/css">
+
+body
+{
+	background-image:url(background.gif);
+		}
+
+menutab
+{
+	font-family: Comic Sans MS, cursive;
+		}
+p.round1
+{
+	border: 2px solid black;
+	border-radius: 8px;
+	border-style: dotted dashed solid double;
+	text-align: justify;
+	font-family:"Comic Sans MS", cursive
+	}
+	
+.button {
+  border-radius: 4px;
+  background-color: #999;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}	
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+	
+</style>
+
+<script>
+function bigImg(x) {
+    x.style.height = "250px";
+    x.style.width = "250px";
+}
+
+function normalImg(x) {
+    x.style.height = "200px";
+    x.style.width = "200px";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+
+</script>
+
+</head>
+
+<body class="body">
+<center>
+
+<table width="824" height="787" border="1">
+	<tr>
+   		 <th height="294" colspan="4" scope="col">
+   			 <img src="welcome.gif" width="820" height="278" />
+   		 </th>
+	</tr>
+  
+	<tr class="menutab">
+ 
+  			<td width="204" height="39">
+    			<div align="center"><a href="index.html">
+     				<p><strong>HOME</strong></p>
+    					</div> 
+   			</td> 		
+   		 
+   			<td width="204" height="39">
+   				 <div align="center"><a href="aboutme.html">
+    			  <p><strong>ABOUT ME</strong></p>
+  					  </div>
+   			</td>
+    
+    		<td width="204" height="39">
+    			<div align="center"><a href="myfamily.html">
+  				    <p><strong>MY FAMILY</strong></p>
+   						 </div>
+    		</td>
+    
+   			<td width="184" height="39">
+    			<div align="center"><a href="mypets.html">
+      				<p><strong>MY PETS</strong></p>
+    					</div>
+    		</td>  
+	</tr>
+    
+  <tr>
+    <td valign="top" height="444" colspan="4">
+    <br />
+    <center><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" id="myImg" src="auny.jpg" width="241" height="178" border="1"/><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" id="myImg" src="aunyyy.jpg" width="241" height="178" border="1"/></center>
+          <!-- Trigger the Modal --><!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+        <blockquote>
+            <p class="round1">
+              <center>
+              Hello! Its me again!</center><br />
+              
+              Now seem like you really interesting to know more about me. Haha
+              Well. Lets me introduce myself again.<br />
+              I'm <b>Auni Najihah binti Ruslan</b>, 21 years old girl from Rawang,Selangor. 
+              I was born on 11:03 pm 30th January 1997 at Hospital University Malaya, Kuala Lumpur.
+              I'm the only child. I started my primary school at SK Taman Bunga Raya(1) and for secondary
+              school at SMK Taman Bunga Raya(1). In form 4 and form 5, I take Perdagangan(2) course. Which is i learned about how to count invoice. It's almost like business 
+              but not exacty a business type. <br />     
+              <br />
+              What I'm doin for my life, Well, after SPM, I continue my studies at Institut Latihan Perindustrian, Kuala Langat for SKM Teknologi Perisian Pengaturcaraan for a year and half.
+              Al
+              hamdulillah, I passed at least 3.13 CGPA(huhuhu). After six month without doin anything, at last i got chance to continue my studies at Kolej Poly-Tech MARA, Batu Pahat in a Diploma Information Technology.<br />
+            </p>
+            <p class="round1">
+              <center>
+              <br />Find me here!<br /><br /></center>
+              <center>
+                <a href="https://www.facebook.com/QuiinsQuiinnyyy" target="_blank"><img src="fbb.png" width="80" height="76"/></a>
+                <a href="https://twitter.com/hahijaninua" target="_blank"><img src="twitter.png" width="91" height="86"/></a>
+                <a href="https://www.instagram.com/queenaunyyy/" target="_blank"><img src="ig.png" width="80" height="76"/></a>
+               <br />
+               <br />
+                <a href="resume.pdf" title="Resume" target="_blank"><button class="button"><span>Resume </span></button></a>
+                <br/>
+                <br />
+                </center>
+            </p>
+          </blockquote>
+           <p align="right"><a href="index.html"><img src="home.png" width="65" height="57"/></a></p>
+    </tr>
+      </tr>
+</table>
+</center>
+</body>
+</html>
